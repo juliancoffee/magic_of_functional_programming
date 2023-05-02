@@ -1,3 +1,13 @@
+# Preparation
+I expect you to have OCaml, Clojure and C compiler (GCC) installed.
+And that you're running GNU/Linux. Later is not required, but in that case,
+you'll need to compile C with your own compiler.
+
+If you don't have some of it, it shouldn't be too hard to install.
+Or you can try to use online tools.
+
+May the Force be with you.
+
 # Ocaml instructions
 
 Used to explain higher-order functions.
@@ -45,4 +55,31 @@ result
 *)
 
 fits [5; 5] 2;;
+
+(* extras *)
+bigger_positives [-5; 4; 5]
+```
+
+# C instructions
+```bash
+$ make
+$ ./main
+$ ./closure
+```
+
+# Clojure instructions
+
+```clojure
+(load-file "core.clj")
+
+(eval answer-1)
+(eval answer-2)
+(eval answer-3)
+(eval answer-4)
+(eval answer-5)
+(eval answer-6)
+(eval answer)
+
+extra-let
+unlet
 ```
