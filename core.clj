@@ -148,6 +148,7 @@
                           ;;
                           ;; p. s. I didn't come up with this idea, because
                           ;; this is crazy
+                          ;; source https://lptk.github.io/programming/2019/10/15/simple-essence-y-combinator.html
                           }
                   ]
                  ;; now let's try another number to double check
