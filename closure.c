@@ -126,12 +126,42 @@ void print_args(struct int_list_t args) {
   printf("\n\n");
 }
 
+// this can be generalized to all types, similar to how qsort works
+//
+// void* map(void* start, size_t n, size_t size, struct closure_t f)
+//
+// but that's the territory of C magic and not the topic of this talk
+//
+// `f` is expected to be fn(int*) -> int*
+int* map(struct int_list_t list, struct closure_t f) {
+  size_t n = list.n;
+  int* els = list.list;
+
+  int* res = malloc(sizeof(int) * n);
+  for (size_t counter = 0; counter < n; counter++) {
+    // (ab)using pointer arithmetic
+    res[counter] = *(int*)do_call(f, els + counter);
+  }
+
+  return res;
+}
+
+// `f` is expected to be fn(int*) -> ()
+void for_each(struct int_list_t list, struct closure_t f) {
+  size_t n = list.n;
+  int* els = list.list;
+
+  for (size_t counter = 0; counter < n; counter++) {
+    do_call(f, els + counter);
+  }
+}
+
 int main(void) {
   const size_t N = 9;
 
   // create our list
   int* list = malloc(sizeof(int) * N);
-  for (size_t counter = 1; counter < N + 1; counter++) {
+  for (size_t counter = 0; counter < N; counter++) {
     list[counter] = counter;
   }
   struct int_list_t args = {.n = N, .list = list};
