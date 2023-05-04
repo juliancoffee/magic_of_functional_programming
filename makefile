@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra
+CFLAGS=-Wall -Wextra -pedantic
 
 all:
 	$(CC) main.c $(CFLAGS) -o main

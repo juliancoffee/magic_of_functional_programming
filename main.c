@@ -2,35 +2,32 @@
 
 // adder type that emulates closure
 //
-// data is our captured environment
-// call is our closure-function
+// step is our captured environment
 struct adder_t {
-  size_t data;
-  size_t (*call)(struct adder_t, size_t);
+  size_t step;
 };
 
-// to have something to initialize adder with
-size_t call_adder(struct adder_t obj, size_t n) {
-  return n + obj.data;
+// function that does actual work
+//
+// let's define a convention to use the name of our
+// closure type with prefix call_
+size_t call_adder_t(struct adder_t obj, size_t n) {
+  return n + obj.step;
 }
 
 // helper to create our adder
 struct adder_t create_adder(size_t step) {
-  struct adder_t obj = { .data = step, .call = &call_adder };
+  struct adder_t obj = { .step = step };
   return obj;
 }
 
 // helper to call our adder
-size_t do_call(struct adder_t obj, size_t n) {
-  // we need to write `obj` twice
-  //
-  // one to get our `call` function, second to give this `call` function
-  // required environment captured in object
-  return obj.call(obj, n);
-}
+// ## prefixes our type with call_
+#define CALL(closure_type) call_ ## closure_type
 
 // our incrementer
 struct adder_t increment(void) {
+  // step is 1 now
   return create_adder(1);
 }
 
@@ -40,5 +37,5 @@ int main(void) {
   // some languages hide it for you, some don't
   struct adder_t inc = increment();
 
-  return printf("%ld\n", do_call(inc, 5));
+  printf("%ld\n", CALL(adder_t)(inc, 5));
 }
