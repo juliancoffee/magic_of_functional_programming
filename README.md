@@ -1,3 +1,9 @@
+# Idea
+Originally I wanted to make a presentation about Y combinator using
+spreadsheets, but unfortunately it's not possible within the limitations of
+them. So instead this talk was about magic in functional programming and how to
+push some limits.
+
 # Preparation
 I expect you to have OCaml, Clojure and C compiler (GCC) installed.
 And that you're running GNU/Linux. Later is not required, but in that case,
@@ -83,3 +89,16 @@ $ ./closure
 extra-let
 unlet
 ```
+
+# Links
+- [Google Sheet](https://docs.google.com/spreadsheets/d/1cIlxdZlucirXPUvDDPGqKlLHwkydDSwZOOoDGXC2noA/edit#gid=0)
+- [Google Slides](https://docs.google.com/presentation/d/14hwra-O6CnYigx4hS4rlihjHDkp8E5cT2NUXzC-Xqas/edit?usp=sharing)
+# More
+- [Stephen Wolfram on Combinators](https://writings.stephenwolfram.com/2020/12/combinators-and-the-story-of-computation/)
+- [Stephen Wolfram on Moses Schonfinkel](https://writings.stephenwolfram.com/2020/12/where-did-combinators-come-from-hunting-the-story-of-moses-schonfinkel/)
+- [Python Function Definition](https://github.com/python/cpython/blob/main/Include/cpython/funcobject.h#L36-L60)
+- [Python Iterators](https://docs.python.org/3/library/itertools.html)
+- [Rust Iterators](https://doc.rust-lang.org/std/iter/index.html)
+- [Java Streams](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+# Credits
+- [Recursion without Recursion: Python](https://lptk.github.io/programming/2019/10/15/simple-essence-y-combinator.html)
