@@ -1,7 +1,7 @@
 # Idea
 Originally I wanted to make a presentation about Y combinator using
 spreadsheets, but unfortunately it's not possible within the limitations of
-them. So instead this talk was about magic in functional programming and how to
+them. So instead this talk was about the magic in functional programming and how to
 push some limits.
 
 # Preparation
