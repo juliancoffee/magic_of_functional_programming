@@ -93,6 +93,7 @@ unlet
 # Links
 - [Google Sheet](https://docs.google.com/spreadsheets/d/1cIlxdZlucirXPUvDDPGqKlLHwkydDSwZOOoDGXC2noA/edit#gid=0)
 - [Google Slides](https://docs.google.com/presentation/d/14hwra-O6CnYigx4hS4rlihjHDkp8E5cT2NUXzC-Xqas/edit?usp=sharing)
+- [YouTube talk](https://youtu.be/TA6t8SQTkAk)
 # More
 - [Stephen Wolfram on Combinators](https://writings.stephenwolfram.com/2020/12/combinators-and-the-story-of-computation/)
 - [Stephen Wolfram on Moses Schonfinkel](https://writings.stephenwolfram.com/2020/12/where-did-combinators-come-from-hunting-the-story-of-moses-schonfinkel/)
